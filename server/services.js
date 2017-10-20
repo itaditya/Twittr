@@ -14,13 +14,12 @@ const stream = T.stream('statuses/filter', {
 });
 
 module.exports = (io) => {
-  const postUpdateFn = function(content, cb) {
+  const postUpdateFn = function (content, cb) {
     T.post('statuses/update', content, function (err, data, response) {
-      console.log(data);
       cb(data);
     })
   }
-  const retweetFn = function(content, cb) {
+  const retweetFn = function (content, cb) {
     T.post('statuses/retweet/:id', content, function (err, data, response) {
       cb(data);
     })
