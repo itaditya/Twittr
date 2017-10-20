@@ -12,7 +12,7 @@
     "start": "nodemon index.js --ignore client",
     "client": "webpack --progress --watch",
     "build": "webpack -p",
-    "deploy"
+    "deploy": "git push heroku deploy:master"
   },
   "keywords": [],
   "author": "Aditya Agarwal <adityaa803@gmail.com> (http://adi.surge.sh/)",
